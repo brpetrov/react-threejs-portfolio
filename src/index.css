@@ -8,9 +8,63 @@
   scroll-behavior: smooth;
 }
 
+/* Target the scrollbar container */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+  height: 8px; /* Height for horizontal scrollbar */
+}
+
+/* Style the scrollbar track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background color of the track */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Style the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the thumb */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Add hover effect for the thumb */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker color on hover */
+}
+
+/* Optional: Style the corner where horizontal and vertical scrollbars meet */
+::-webkit-scrollbar-corner {
+  background: #f1f1f1;
+}
+
 body {
   background: #010103;
   font-family: 'General Sans', sans-serif;
+}
+
+.outer-color {
+  background-color: #191918;
+}
+
+.max-laptop-width {
+  width: 334px;
+}
+
+.max-laptop-height {
+  height: 216px;
+}
+
+.content {
+  width: 334px;
+  height: 216px;
+  background: #1f1f1f;
+  border-radius: 3px;
+  overflow: hidden;
+  padding: 0;
+}
+
+.wrapper {
+  transform: scale(0.5);
+  transform-origin: top left;
 }
 
 @layer utilities {
