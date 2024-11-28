@@ -1,37 +1,23 @@
 import React from 'react';
 
-const Sidebar = () => {
+const Sidebar = ({ onSelectFile }) => {
+  const files = ['index.html', 'style.css', 'main.js'];
+
   return (
-    <div className='flex h-screen w-screen'>
-      <div className='bg-black-600 h-full w-20 border-r border-r-gray-500 flex flex-col py-2 space-y-2'>
-        {/* File: index.html */}
-        <div className='flex items-center gap-2 text-gray-300 hover:bg-gray-700   py-1 rounded cursor-pointer'>
+    <div className='bg-black-600 h-full w-[120px] border-r border-r-gray-500 flex flex-col py-2 space-y-2'>
+      {files.map(file => (
+        <div
+          key={file}
+          className='flex items-center gap-2 text-gray-300 hover:bg-gray-700 py-1 rounded cursor-pointer'
+          onClick={() => onSelectFile(file)}>
           <img
-            src='/public/assets/laptop-icons/html.svg' /* Replace with actual HTML icon */
-            alt='index.html'
-            className='w-[1.25rem] -ml-[0.1rem]'
-          />
-          <span className='text-xs -ml-2'>index.html</span>
-        </div>
-        {/* File: styles.css */}
-        <div className='flex items-center gap-2 text-gray-300 hover:bg-gray-700 py-1 rounded cursor-pointer'>
-          <img
-            src='/public/assets/laptop-icons/css.svg' /* Replace with actual CSS icon */
-            alt='styles.css'
+            src={`/public/assets/laptop-icons/${file.split('.')[1]}.svg`}
+            alt={file}
             className='w-[1rem]'
           />
-          <span className='-ml-1 text-xs'>style.css</span>
+          <span className='text-xs -ml-1'>{file}</span>
         </div>
-        {/* File: main.js */}
-        <div className='flex items-center gap-2 text-gray-300 hover:bg-gray-700 py-1 rounded cursor-pointer'>
-          <img
-            src='/public/assets/laptop-icons/js.svg' /* Replace with actual JavaScript icon */
-            alt='main.js'
-            className='w-[0.95rem]'
-          />
-          <span className='text-xs -ml-1'>main.js</span>
-        </div>
-      </div>
+      ))}
     </div>
   );
 };

@@ -313,3 +313,34 @@ export const workExperiences = [
     animation: 'salute',
   },
 ];
+
+export const fileContents = {
+  'index.html': `
+  <!DOCTYPE html>
+  <html>
+      <head>
+          <title> The Title! </title>
+      </head>
+      <body>
+          <h1> The Body! </h1>
+      </body>
+  </html>
+  `,
+  'style.css': `
+ body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+  }
+
+  h1 {
+      color: GOLD;
+  }
+`,
+  'main.js': `
+  console.log('Hello World');
+
+  console.log('That's it!');
+`,
+};

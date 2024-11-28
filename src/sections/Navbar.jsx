@@ -45,7 +45,8 @@ const Navbar = () => {
           </nav>
         </div>
       </div>
-      <div className={`nav-sidebar ${isOpen ? 'max-h-screen' : 'max-h-0'}`}>
+      <div
+        className={`nav-sidebar ${isOpen ? 'max-h-screen' : 'max-h-0'} z-50`}>
         <nav className='p-5'>
           <NavItems />
         </nav>
