@@ -4,7 +4,7 @@ const Sidebar = ({ onSelectFile }) => {
   const files = ['index.html', 'style.css', 'main.js'];
 
   return (
-    <div className='bg-black-600 h-full w-[120px] border-r border-r-gray-500 flex flex-col py-2 space-y-2'>
+    <div className='bg-black-600 h-full w-[82px] border-r border-r-gray-500 flex flex-col py-2 space-y-2'>
       {files.map(file => (
         <div
           key={file}
@@ -13,7 +13,7 @@ const Sidebar = ({ onSelectFile }) => {
           <img
             src={`/public/assets/laptop-icons/${file.split('.')[1]}.svg`}
             alt={file}
-            className='w-[1rem]'
+            className={file === 'index.html' ? 'w-[1.16rem]' : 'w-[1rem]'}
           />
           <span className='text-xs -ml-1'>{file}</span>
         </div>
