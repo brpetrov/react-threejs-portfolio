@@ -15,20 +15,28 @@ export default function Model(props) {
       Math.cos(t / 2) / 20 + 0.25,
       0.1
     );
-    group.current.rotation.y = THREE.MathUtils.lerp(
-      group.current.rotation.y,
-      Math.sin(t / 4) / 20,
-      0.1
-    );
-    group.current.position.y = THREE.MathUtils.lerp(
-      group.current.position.y,
-      (-2 + Math.sin(t / 2)) / 2,
-      0.1
-    );
+
+    //Not sure if the below it's needed for now
+
+    // group.current.rotation.y = THREE.MathUtils.lerp(
+    //   group.current.rotation.y,
+    //   Math.sin(t / 4) / 20,
+    //   0.1
+    // );
+    // group.current.position.y = THREE.MathUtils.lerp(
+    //   group.current.position.y,
+    //   (-2 + Math.sin(t / 2)) / 2,
+    //   0.1
+    // );
   });
 
   return (
-    <group ref={group} {...props} dispose={null}>
+    <group
+      ref={group}
+      {...props}
+      dispose={null}
+      onPointerOver={() => (document.body.style.cursor = 'pointer')}
+      onPointerOut={() => (document.body.style.cursor = 'default')}>
       <group rotation-x={-0.425} position={[0, -0.04, 0.41]}>
         <group position={[0, 2.96, -0.13]} rotation={[Math.PI / 2, 0, 0]}>
           <mesh
@@ -40,7 +48,6 @@ export default function Model(props) {
             geometry={nodes['Cube008_1'].geometry}
           />
           <mesh geometry={nodes['Cube008_2'].geometry}>
-            {/* Drei's HTML component can "hide behind" canvas geometry */}
             <LaptopContent />
           </mesh>
         </group>

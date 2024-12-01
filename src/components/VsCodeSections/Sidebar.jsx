@@ -13,7 +13,7 @@ const Sidebar = ({ onSelectFile }) => {
           <img
             src={`/public/assets/laptop-icons/${file.split('.')[1]}.svg`}
             alt={file}
-            className={file === 'index.html' ? 'w-[1.16rem]' : 'w-[1rem]'}
+            className={file === 'index.html' ? 'w-[1.2rem]' : 'w-[1.05rem]'}
           />
           <span className='text-xs -ml-1'>{file}</span>
         </div>
