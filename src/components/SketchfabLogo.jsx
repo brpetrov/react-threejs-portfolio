@@ -11,7 +11,7 @@ const SketchfabLogo = ({ ...props }) => {
       <group
         {...props}
         dispose={null}
-        position={[-14, 3, 3]}
+        position={[-10, 3, 3]}
         scale={0.25}
         rotation={[0.4, -0.9, 0]}>
         <mesh
