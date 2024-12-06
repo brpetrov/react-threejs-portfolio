@@ -89,14 +89,14 @@ const Hero = () => {
               <Laptop scale={scale} />
             </group>
             <Environment preset='night' />
-            {isDesktop && (
+            {
               <group>
                 <CSharpLogo position={sizes.cShapPosition} />
                 <ReactLogo position={sizes.reactLogoPosition} />
                 <GithubLogo position={sizes.githubPosition} />
-                <SketchfabLogo position={sizes.ringPosition} />
+                <SketchfabLogo position={sizes.sketchFabPosition} />
               </group>
-            )}
+            }
           </Suspense>
           <PerspectiveCamera makeDefault position={[0, 0, 27]} />
           <ambientLight intensity={1} />
@@ -108,7 +108,7 @@ const Hero = () => {
           <Button
             name='Get in touch'
             isBeam
-            containerClass='sm:w-fit w-full sm:-min-w-96'
+            containerClass='sm:w-fit w-full sm:min-w-96'
           />
         </a>
       </div>

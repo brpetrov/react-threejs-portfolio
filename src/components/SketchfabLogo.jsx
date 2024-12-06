@@ -8,12 +8,7 @@ const SketchfabLogo = ({ ...props }) => {
   const { nodes, materials } = useGLTF('/models/sketchfab_logo.glb');
   return (
     <Float>
-      <group
-        {...props}
-        dispose={null}
-        position={[-10, 3, 3]}
-        scale={0.25}
-        rotation={[0.4, -0.9, 0]}>
+      <group {...props} dispose={null} scale={0.25} rotation={[0, -1.5, 0]}>
         <mesh
           castShadow
           receiveShadow

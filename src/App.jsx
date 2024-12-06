@@ -9,6 +9,7 @@ const App = () => {
       <Navbar />
       <Hero />
       <About />
+      <div className='my-20'></div>
     </main>
   );
 };
